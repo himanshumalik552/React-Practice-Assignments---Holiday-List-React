@@ -5,7 +5,9 @@ import '../styles/App.css';
 class App extends Component {
   constructor(props) {
     super(props)
-
+    // this.state={
+    //   indiaCites=[]
+    // }
     this.cityList = [{ name: 'Goa', country: 'India' },
     { name: 'Amsterdam', country: 'Netherlands' },
     { name: 'New York', country: 'USA' },
@@ -37,12 +39,16 @@ class App extends Component {
     ]
   }
 
-  render() {
+  // componentDidMount(){
+  //   let indiaCity = this.cityList.filter((eachCity)=> eachCity.country === 'India');
+  //   this.setState({ 
+  //     indiaCities: [...indianCities]
+  //   })
+  // }
 
-    // var items = this.cityList.filter(item=> item.country.includes('india'));
+  render() {
     return (
       <div id="main">
-        {/* Do not remove the main div */}
         <ol>
         {this.cityList.filter(city=>city.country === 'India').map((city, index)=>(
             <li key={`location ${index+1}`}>{city.name}</li>
